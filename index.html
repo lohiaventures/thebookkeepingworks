@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>The Bookkeeping Works | Bookkeeping & Notary | Central Wisconsin</title>
+  <meta name="description" content="The Bookkeeping Works provides value-added bookkeeping and accounting, fractional bookkeeping, personal finance coaching, and notary services in Wausau, Green Bay, and Central Wisconsin.">
+  <meta name="keywords" content="bookkeeping Wausau, accounting, financial reports, CPA firm, CPA, accountant, bookkeeping Green Bay, notary Wisconsin, loan signing agent, personal finance coach, fractional bookkeeping">
+  <meta name="robots" content="index, follow">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+/* 1. SMOOTH SCROLLING */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 2. SCROLL OFFSET: Prevents the header from covering your titles */
+section {
+  scroll-margin-top: 80px; 
+}
+
+
+    /* 1. GLOBAL & BACKGROUND FIXES */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      /* Slightly darker professional slate color - no textures */
+      background-color: #f4f6f8; 
+      color: #1e293b;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #f9fbfc;
+      border-bottom: 2px solid #e3e7ea;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 1001;
+    }
+
+    #menu-toggle, .hamburger {
+      display: none;
+    }
+
+    /* 2. TITLE WRAPPING FIX */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .brand img {
+      height: 55px;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 26px;
+      white-space: nowrap; /* Prevents "WorksTM" from jumping to next line */
+    }
+
+    .nav {
+      display: flex;
+    }
+
+    .nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #0b2b4a;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 40px 20px;
+      text-align: center;
+      background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      color: #0b2b4a;
+    }
+
+    .hero span {
+      color: #1c7c54;
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+/* SECTION BACKGROUND COLORS */
+
+
+
+/* Services / Hero section */
+.hero {
+  background-color: #ffffff;
+}
+
+/* Booking section */
+#book {
+  background-color: #dde4eb;
+}
+
+/* Contact section */
+#contact {
+  background-color: #f1f5f9;
+}
+
+
+
+    h3 {
+      text-align: center;
+      font-size: 32px;
+      color: #0b2b4a;
+      margin-bottom: 50px;
+    }
+
+    /* 3. SERVICE BOXES & ANIMATIONS */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+.green-underline {
+  color: #0b2b4a !important;            /* Forces text to stay dark blue, overriding the hero green */
+  border-bottom: 3px solid #1c7c54; /* Matches your brand green */
+  padding-bottom: 2px;             /* Space between text and line */
+  display: inline-block;          /* Ensures the underline stays with the text */
+}
+
+    .service-box {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      position: relative;
+      cursor: pointer;
+      
+      /* Fade-in initial state */
+      opacity: 1;
+      transform: translateY(0);
+      
+      /* Transition for both Scroll-In and Hover animations */
+      transition: opacity 0.8s ease-out, transform 0.4s ease-out, box-shadow 0.3s ease;
+    }
+
+    /* Scroll Animation Target */
+    .service-box.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Hover "Lift" Effect */
+    .service-box.appear:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+      background-color: #f8fafc;
+    }
+
+    .service-box h4 {
+      color: #0b2b4a;
+      margin-top: 0;
+    }
+
+    .service-box button {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: #1c7c54;
+      border: none;
+      color: white;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+.service-box p {
+  text-align: justify;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+    /* Contact */
+    .contact-area {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      align-items: start;
+    }
+
+/* Extra space below dropdown */
+form select {
+border: 1.5px solid #0b2b4a; /* Dark professional blue to match your brand */
+  border-radius: 6px;
+  padding: 12px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #1e293b;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+    form input, 
+form textarea, 
+form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  /* Dark professional border for all fields */
+  border: 1.5px solid #0b2b4a; 
+  background-color: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+  color: #1e293b;
+}
+
+/* Specific fix for the dropdown height and spacing */
+form select {
+  height: 45px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+
+    form button {
+      background: #0b2b4a;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 12px;
+      background: white;
+    }
+
+    footer {
+      background: #0b2b4a;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 80px;
+    }
+
+    /* 4. MOBILE RESPONSIVENESS FIXES */
+    @media screen and (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      .brand h1 {
+        font-size: 18px; /* Smaller font on mobile to keep it on one line */
+      }
+
+      .brand img {
+        height: 35px;
+      }
+
+      .hamburger {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        color: #0b2b4a;
+      }
+
+      .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        background: #f9fbfc;
+        border-bottom: 2px solid #e3e7ea;
+        z-index: 1000;
+      }
+
+      #menu-toggle:checked ~ .nav {
+        display: flex;
+      }
+
+      .nav a {
+        margin: 0;
+        padding: 20px;
+        border-top: 1px solid #e3e7ea;
+        text-align: center;
+      }
+
+      .hero h2 { font-size: 28px; }
+      
+      /* Fix Nationwide text wrap */
+      .hero p {
+        font-size: 15px;
+        padding: 0 10px;
+        line-height: 1.6;
+      }
+
+      .contact-area {
+        grid-template-columns: 1fr;
+      }
+    }
+iframe {
+  width: 100%;
+  height: 700px; /* Adjust height as needed for the Calendly widget */
+  border: none;
+  border-radius: 12px;
+}
+  </style>
+</head>
+
+<body>
+
+<header>
+  <!-- 1. Clickable Brand linking to home -->
+  <a href="index.html" class="brand" style="text-decoration: none; color: inherit;">
+    <img src="logo.png" alt="The Bookkeeping Works">
+    <h1>The Bookkeeping <span style="color:#1c7c54">Works</span><sup>TM</sup></h1>
+  </a>
+
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="hamburger">☰</label>
+
+  <!-- 2. Changed 'Services' to 'About Us' -->
+  <nav class="nav">
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+    <a href="#book">Book</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h3><span>About</span> Us</h3>
+  <p style="text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+    The Bookkeeping Works provides expert financial oversight for businesses in 
+    Central Wisconsin and nationwide. Our mission is to help you grow by turning 
+    complex numbers into clear, actionable insights.
+  </p>
+</section>
+
+<section class="hero">
+    <h2>Our <span>Services</span></h2>
+    <p><b>Proudly Serving <span>In-Person</span>: Central Wisconsin & <span>Virtually</span>: Nationwide</b></p>
+  </div>
+
+  <div class="services">
+    <div class="service-box">
+      <h4><span><b>Value-Added</b></span> Bookkeeping</h4>
+      <p>Numbers tell stories. Our bookkeeping services include your <b>Traditional Accounting</b> and <b>Key Insights</b> that will help you to make healthy business decisions and <span><b>GROW!</b></span></p>
+    </div>
+
+
+    <div class="service-box">
+      <h4><span><b>Personal Finance</b></span> Coaching</h4>
+      <p>Ongoing, personalized coaching to help you budget better, reduce debt, build savings, and make confident financial decisions for the long term.</p>
+    </div>
+
+    <div class="service-box">
+      <h4><span><b>Fractional</b></span> Bookkeeping</h4>
+      <p>Part-time, expert bookkeeping support for growing businesses without the cost of a full-time hire. Get accurate records, monthly reports, and ongoing financial oversight to stay in control.</p>
+    </div>
+
+    <div class="service-box">
+      <h4><span><b>Notary</b></span> Services <span class="green-underline">(Mobile & On-site)</span></h4>
+      <p>Mobile notary services provided at your home, office, or preferred location in Central Wisconsin. Serving individuals and businesses with reliable, secure, and professional document notarization.</p>
+    </div>
+
+ <div class="service-box">
+      <h4><span><b>Loan Signing</b></span> Agent</h4>
+      <p>Support for loan and real estate document signings with a focus on accuracy, organization, and a smooth signing experience for all parties involved.</p>
+    </div>
+
+
+</section>
+
+<!-- 5. PREVENT AUTO-JUMP: Added loading="lazy" to the iframe -->
+<section id="book">
+  <h3>Book Your Free Consultation</h3>
+  <iframe src="https://calendly.com/klohia-thebookkeepingworks/30min" loading="lazy"></iframe>
+</section>
+
+<section id="contact">
+  <h3>Contact Us</h3>
+  <div class="contact-area">
+    <form 
+  action="https://formsubmit.co/hello@thebookkeepingworks.com" 
+  method="POST"
+  id="contactForm"
+>
+
+  <!-- FormSubmit Settings -->
+  <input type="hidden" name="_subject" value="New Website Inquiry - The Bookkeeping Works">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+
+  <!-- User Inputs -->
+
+  <input type="text" name="name" placeholder="Your Name" required>
+
+  <input type="email" name="email" placeholder="Your Email" required>
+
+  <input type="tel" name="phone" placeholder="Phone Number">
+
+  <!-- Inquiry Type Dropdown -->
+  <select name="inquiry_type" required>
+    <option value="">-- Select Reason for Contact --</option>
+    <option value="Accounting/Bookkeeping">Accounting / Bookkeeping Service Inquiry</option>
+    <option value="Personal Finance Coaching">Personal Finance Coaching Inquiry</option>
+    <option value="Notary Services">Notary Services Inquiry</option>
+    <option value="Loan Signing Agent">Loan Signing Agent Inquiry</option>
+    <option value="Other">Other</option>
+  </select>
+
+  <textarea 
+    name="message" 
+    rows="5" 
+    placeholder="Your Message" 
+    required
+  ></textarea>
+
+  <button type="submit">Send Message</button>
+
+</form>
+
+    <div class="info-box">
+      <p><strong>Phone:</strong> (732) 532-7401</p>
+      <p><strong>Email:</strong> hello@thebookkeepingworks.com</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 The Bookkeeping Works<sup>TM</sup> | Wausau, WI</p>
+</footer>
+
+<!-- 6. SCROLL OBSERVER SCRIPT -->
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('appear');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.service-box').forEach(box => {
+    observer.observe(box);
+  });
+</script>
+
+<script>
+  const form = document.getElementById("contactForm");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        alert("Thank you for reaching out! You will hear back from us within 24 hours.");
+        form.reset();
+      } else {
+        alert("Oops! Something went wrong. Please try again.");
+      }
+    }).catch(error => {
+      alert("Oops! Something went wrong. Please try again.");
+    });
+  });
+</script>
+</body>
+</html>
